@@ -1,0 +1,9 @@
+.text-input.error{
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+.text-input.correct{
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}

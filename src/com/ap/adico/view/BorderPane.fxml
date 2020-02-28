@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minWidth="1.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ap.adico.view.BorderPaneController">
+   <top>
+      <AnchorPane fx:id="topPane" BorderPane.alignment="TOP_LEFT" />
+   </top>
+   <center>
+      <AnchorPane fx:id="centerPane" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

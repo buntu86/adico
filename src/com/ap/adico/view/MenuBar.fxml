@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+<MenuBar maxWidth="3000.0" minWidth="3000.0" prefWidth="3000.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ap.adico.view.MenuBarController">
+  <menus>
+    <Menu mnemonicParsing="false" text="Fichier">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#close" text="Quitter" />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Aide">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#dialogAProposDe" text="A propos" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>
