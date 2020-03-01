@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 
 public class BorderPaneController implements Initializable {
 
+    //TODO: make it private if you can
     @FXML AnchorPane centerPane;
     @FXML AnchorPane topPane;
 
@@ -37,7 +38,9 @@ public class BorderPaneController implements Initializable {
                 AnchorPane.setRightAnchor(mainVBox, 0.0);
 
         } catch (Exception e) {
+            //TODO: proper logging
             System.out.println("borderPaneController | " + e.getMessage());
+            //TODO: you can extract the exit function in a convenient class.
             System.exit(2);
         }
     }
