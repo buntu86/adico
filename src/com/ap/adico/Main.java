@@ -11,14 +11,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        //TODO: only loader.load() needs to have the try-catch. Suggestion: extract it in a method and handle the exception in that method.
         try {
             //Load border pane
             FXMLLoader loader = new FXMLLoader();
-            //TODO: extract String as constant
             loader.setLocation(Main.class.getResource("/com/ap/adico/view/BorderPane.fxml"));
             BorderPane borderPane = loader.load();
-            //TODO: ditto
             borderPane.getStylesheets().add(Main.class.getResource("/com/ap/adico/css/textfield.css").toString());
 
             //Set border to primaryStage
@@ -30,7 +27,6 @@ public class Main extends Application {
             Config.setPrimaryStage(primaryStage);
         }
         catch (Exception e){
-            //TODO: use a proper logger (SLF4J/Log4j)
             System.out.println("main | " + e.getMessage());
             System.exit(1);
         }

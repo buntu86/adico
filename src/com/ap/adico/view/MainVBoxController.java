@@ -20,7 +20,6 @@ import java.util.UUID;
 
 public class MainVBoxController implements Initializable {
 
-    //TODO: if you can, put those fields as private for a better encapsulation
     @FXML Label lb_titre1;
     @FXML Button bt_next;
     @FXML Button bt_prev;
@@ -29,7 +28,6 @@ public class MainVBoxController implements Initializable {
 
     private final Dico dico = new Dico();
     private int indexActuel = 0;
-    //TODO: you have forgotten the <> at the ArrayList
     private final List<TextField> listTf = new ArrayList();
     private final ImageView imageView = new ImageView();
 
@@ -37,9 +35,7 @@ public class MainVBoxController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         newWord();
 
-        //TODO: In English ;) (Buttons -> Buttons)
         //Boutons
-        //TODO: would it be better a method hasNext/hasPrevious?
         if(dico.size()>1) {
             bt_next.setDisable(false);
             bt_prev.setDisable(false);
@@ -61,7 +57,6 @@ public class MainVBoxController implements Initializable {
         //Initialise listTextField with dico word selected
         for(int i=0; i<dico.get(indexActuel).length();i++)
         {
-            //TODO: j is never used
             int j=i+1;
             TextField tf = new TextField();
             tf.setEditable(false);
@@ -82,7 +77,6 @@ public class MainVBoxController implements Initializable {
                     if(tempString.toUpperCase().equals(dico.get(indexActuel).toUpperCase()))
                         next();
                 }
-                //TODO proper logging
                 else
                     System.out.println("Erreur touche ----> " + ke.getText());
             });
@@ -95,14 +89,13 @@ public class MainVBoxController implements Initializable {
         hbox.getChildren().add(imageView);
 
         //Add image from actual word
-        Image imgTemp = null; //TODO: you can remove the '=null';
+        Image imgTemp = null;
         try {
             imgTemp = new Image(this.getClass().getResource("/files/images/z_aucun.png").openStream());
             image.setImage(imgTemp);
             imgTemp = new Image(this.getClass().getResource("/files/images/" + dico.get(indexActuel) + ".png").openStream());
             image.setImage(imgTemp);
         } catch (Exception e) {
-            //TODO: proper logging
             System.out.println("image ok introuvable:" + e.getMessage());
         }
 
@@ -157,14 +150,11 @@ public class MainVBoxController implements Initializable {
         }
     }
 
-
-    //TODO: the convention says that a method name should have a verb, followed by a name.
     private void imgOk(){
         Image imgOk = null;
         try {
             imgOk = new Image(this.getClass().getResource("/files/icons/icon-ok.png").openStream());
         } catch (Exception e) {
-            //TODO: proper logging and in english: image cannot be found
             System.out.println("image ok introuvable:" + e.getMessage());
         }
 
@@ -175,7 +165,6 @@ public class MainVBoxController implements Initializable {
         bt_next.setDisable(false);
     }
 
-    //TODO: the convention says that a method name should have a verb, followed by a name.
     private void imgErreur(){
         Image imgErreur = null;
         try {
@@ -190,14 +179,12 @@ public class MainVBoxController implements Initializable {
         bt_next.setDisable(true);
     }
 
-    //TODO: the convention says that a method name should have a verb, followed by a name.
     @FXML private void next(){
         if(dico.size()<=++indexActuel)
             indexActuel=0;
         newWord();
     }
 
-    //TODO: the convention says that a method name should have a verb, followed by a name.
     @FXML private void prev(){
         if(indexActuel==0)
             indexActuel=dico.size()-1;
