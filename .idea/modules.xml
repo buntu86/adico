@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/adico.iml" filepath="$PROJECT_DIR$/.idea/adico.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adico.iml" filepath="$PROJECT_DIR$/adico.iml" />
     </modules>
   </component>
 </project>

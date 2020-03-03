@@ -25,7 +25,6 @@ public class MenuBarController implements Initializable {
         System.exit(0);
     }
 
-    //TODO: method should be in english (e.g. buildAboutDialog)
     @FXML private void dialogAProposDe(){
         try{
             FXMLLoader loader = new FXMLLoader();
@@ -38,7 +37,6 @@ public class MenuBarController implements Initializable {
             aproposStage.initOwner(Config.getPrimaryStage());
             Scene scene = new Scene(page);
             aproposStage.setScene(scene);
-            //TODO: controller is never used
             aProposDeController controller = loader.getController();
 
             aproposStage.addEventHandler(KeyEvent.KEY_PRESSED, (KeyEvent t) -> {
@@ -50,7 +48,6 @@ public class MenuBarController implements Initializable {
 
             aproposStage.showAndWait();
         } catch (IOException e) {
-            //TODO: proper logging
             e.printStackTrace();
         }
     }
